@@ -44,7 +44,23 @@ public class Order {
         }
         return total;
     }
+    public int getTacoCount() {
 
+        return tacos.size();
+
+    }
+
+    public int getDrinkCount() {
+
+        return drinks.size();
+
+    }
+
+    public int getChipCount() {
+
+        return chips.size();
+
+    }
     @Override
     public String toString() {
 
@@ -65,7 +81,7 @@ public class Order {
             output += chip + "\n";
 
         }
-        output += "\nTOTAL: $" + getTotal();
+        output += "\nTOTAL: $" + String.format("%.2f", getTotal());
 
         return output;
     }
